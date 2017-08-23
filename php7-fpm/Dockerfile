@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install -j$(nproc) gd
 
 # Install wkhtmltopdf
+RUN apt-get install libfontconfig1 libxrender1
 RUN wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 RUN tar -vxf wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 RUN rsync -vlr wkhtmltox/* /usr/local/
