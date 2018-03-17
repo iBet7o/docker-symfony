@@ -15,10 +15,10 @@ Docker Symfony (PHP7.1-FPM - NGINX - MySQL)
     cp .env.dist .env
     ```
 
-2. Crear el archivo vhost, para la app, en base al archivo `nginx/vhosts/my-app.dev.conf.dist` y ajustar a la app.
+2. Crear el archivo vhost en base al archivo `nginx/vhosts/my-site-dev.conf.dist` y ajustar el contenido al sitio.
 
     ```bash
-    cp nginx/vhosts/my-app.dev.conf.dist nginx/vhosts/my-app.dev.conf
+    cp nginx/vhosts/my-site-dev.conf.dist nginx/vhosts/my-site.dev.conf
     ```
 
 3. Construir y ejecutar los contenedores en segundo plano.
